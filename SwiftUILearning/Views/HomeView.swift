@@ -13,9 +13,22 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.expenses) { expense in
-                NavigationLink(destination: DetailExpensesView(expense: expense)) {
-                    Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
+            ZStack {
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .tint(.gray)
+                        .scaleEffect(2)
+                }
+                
+                if viewModel.showError {
+                    Text("Cannot Load Data")
+                } else {
+                    List(viewModel.expenses) { expense in
+                        NavigationLink(destination: DetailExpensesView(expense: expense)) {
+                            Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
+                        }
+                    }
                 }
             }
             .navigationTitle("Home")

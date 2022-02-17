@@ -31,6 +31,22 @@ struct HomeView: View {
                     }
                 }
             }
+            .navigationBarItems(trailing:
+                                    HStack {
+                Button(action: viewModel.filterButtonTapped) {
+                    Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                }
+                .fullScreenCover(isPresented: $viewModel.isFilterShowing) {
+                    FilterView(isPresentedFilter: $viewModel.isFilterShowing)
+                }
+                Button(action: viewModel.fileButtonTapped) {
+                    Image(systemName: "plus.rectangle.on.folder.fill")
+                }
+                .sheet(isPresented: $viewModel.isCreatingFileShowing) {
+                    CreateFileView()
+                }
+            }
+            )
             .navigationTitle("Home")
         }
         .onAppear(perform: viewModel.fecthExpenses)

@@ -12,6 +12,8 @@ class HomeViewModel: ObservableObject {
     @Published var expenses = [Expense]()
     @Published var isLoading = false
     @Published var showError = false
+    @Published var isFilterShowing = false
+    @Published var isCreatingFileShowing = false
     
     func fecthExpenses() {
         isLoading = true
@@ -24,6 +26,23 @@ class HomeViewModel: ObservableObject {
             }
             self.showError = false
             self.expenses = expenses
+        }
+    }
+    
+    func filterButtonTapped() {
+        if isFilterShowing {
+            isFilterShowing = false
+        } else {
+            isFilterShowing = true
+        }
+        
+    }
+    
+    func fileButtonTapped() {
+        if isCreatingFileShowing {
+            isCreatingFileShowing = false
+        } else {
+            isCreatingFileShowing = true
         }
     }
 }

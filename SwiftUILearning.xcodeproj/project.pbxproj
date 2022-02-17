@@ -16,6 +16,10 @@
 		2F4310F527BA320C002E0ACC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F427BA320C002E0ACC /* HomeView.swift */; };
 		2F4310F827BA32D7002E0ACC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F727BA32D7002E0ACC /* HomeViewModel.swift */; };
 		2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F927BA3AC5002E0ACC /* DetailExpensesView.swift */; };
+		2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986227BE30F500A1CB84 /* FilterView.swift */; };
+		2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986427BE323400A1CB84 /* CreateFileView.swift */; };
+		2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */; };
+		2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986827BE4A3200A1CB84 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		2F4310F427BA320C002E0ACC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2F4310F727BA32D7002E0ACC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2F4310F927BA3AC5002E0ACC /* DetailExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpensesView.swift; sourceTree = "<group>"; };
+		2FB3986227BE30F500A1CB84 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		2FB3986427BE323400A1CB84 /* CreateFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileView.swift; sourceTree = "<group>"; };
+		2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		2FB3986827BE4A3200A1CB84 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4310F127BA2F84002E0ACC /* Expenses.swift */,
+				2FB3986827BE4A3200A1CB84 /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +111,8 @@
 			children = (
 				2F4310F427BA320C002E0ACC /* HomeView.swift */,
 				2F4310F927BA3AC5002E0ACC /* DetailExpensesView.swift */,
+				2FB3986227BE30F500A1CB84 /* FilterView.swift */,
+				2FB3986427BE323400A1CB84 /* CreateFileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4310F727BA32D7002E0ACC /* HomeViewModel.swift */,
+				2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */,
 			);
 			path = VIewModels;
 			sourceTree = "<group>";
@@ -185,9 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
+				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
+				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
+				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,
 				2F4310F827BA32D7002E0ACC /* HomeViewModel.swift in Sources */,
 				2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */,
 				2F4310EF27BA2D78002E0ACC /* APIService.swift in Sources */,
+				2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */,
 				2F4310F527BA320C002E0ACC /* HomeView.swift in Sources */,
 				2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */,
 				2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */,

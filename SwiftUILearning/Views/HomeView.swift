@@ -36,18 +36,22 @@ struct HomeView: View {
                 Button(action: viewModel.filterButtonTapped) {
                     Image(systemName: "line.3.horizontal.decrease.circle.fill")
                 }
-                .fullScreenCover(isPresented: $viewModel.isFilterShowing) {
-                    FilterView(isPresentedFilter: $viewModel.isFilterShowing)
-                }
-                Button(action: viewModel.fileButtonTapped) {
+                Menu {
+                    Button(action: viewModel.fileButtonTapped) {
+                        Text("Create New Group")
+                    }
+                } label: {
                     Image(systemName: "plus.rectangle.on.folder.fill")
-                }
-                .sheet(isPresented: $viewModel.isCreatingFileShowing) {
-                    CreateFileView()
                 }
             }
             )
             .navigationTitle("Home")
+            .fullScreenCover(isPresented: $viewModel.isFilterShowing) {
+                FilterView(isPresentedFilter: $viewModel.isFilterShowing)
+            }
+            .fullScreenCover(isPresented: $viewModel.isCreatingFileShowing) {
+                CreateFileView(isCreatingFilePresented: $viewModel.isCreatingFileShowing)
+            }
         }
         .onAppear(perform: viewModel.fecthExpenses)
     }

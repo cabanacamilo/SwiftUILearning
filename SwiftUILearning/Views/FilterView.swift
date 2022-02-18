@@ -89,7 +89,6 @@ struct FilterView: View {
                     }
                     .padding()
                 }
-                .background(Color(.systemGroupedBackground))
                 Button("Filter by conditions") {
                     
                 }
@@ -99,6 +98,7 @@ struct FilterView: View {
                 .foregroundColor(.white)
                 Spacer()
             }
+            
             .navigationTitle("Filter")
             .navigationBarItems(trailing:
                                     HStack {
@@ -111,6 +111,7 @@ struct FilterView: View {
                     Image(systemName: "xmark")
                 })
             })
+            .background(Color(.systemGroupedBackground))
         }
     }
     

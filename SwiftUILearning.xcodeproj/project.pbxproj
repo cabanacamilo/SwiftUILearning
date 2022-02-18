@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */; };
 		2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */; };
 		2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310E127BA2599002E0ACC /* ContentView.swift */; };
 		2F4310E427BA259B002E0ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4310E327BA259B002E0ACC /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileViewModel.swift; sourceTree = "<group>"; };
 		2F4310DC27BA2599002E0ACC /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningApp.swift; sourceTree = "<group>"; };
 		2F4310E127BA2599002E0ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				2F4310F727BA32D7002E0ACC /* HomeViewModel.swift */,
 				2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */,
+				2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */,
 			);
 			path = VIewModels;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */,
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
 				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,

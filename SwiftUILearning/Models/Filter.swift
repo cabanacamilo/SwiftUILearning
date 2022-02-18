@@ -12,7 +12,7 @@ struct Filter {
     var expensesStatus: [ExpensesStatus]
     var expensesDate: ExpensesDate
     
-    static let testExpensesStatus = [
+    static let expensesAppoved = [
         ExpensesStatus(id: 0, status: "All"),
         ExpensesStatus(id: 1, status: "Pending my approval"),
         ExpensesStatus(id: 2, status: "Submitted"),
@@ -20,6 +20,15 @@ struct Filter {
         ExpensesStatus(id: 4, status: "Reimbursed"),
         ExpensesStatus(id: 5, status: "Processed"),
         ExpensesStatus(id: 6, status: "Rejedted")
+    ]
+    
+    static let myExpenses = [
+        ExpensesStatus(id: 0, status: "All"),
+        ExpensesStatus(id: 1, status: "Submitted"),
+        ExpensesStatus(id: 2, status: "Approved"),
+        ExpensesStatus(id: 3, status: "Reimbursed"),
+        ExpensesStatus(id: 4, status: "Processed"),
+        ExpensesStatus(id: 5, status: "Rejedted")
     ]
 }
 

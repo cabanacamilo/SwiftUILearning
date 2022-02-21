@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeViewModel: ObservableObject {
+class ExpensesViewModel: ObservableObject {
     
     @Published var expenses = [Expense]()
     @Published var isLoading = false

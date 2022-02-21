@@ -33,11 +33,15 @@ struct ExpensesView: View {
             }
             .navigationBarItems(trailing:
                                     HStack {
-                Button(action: viewModel.filterButtonTapped) {
+                Button {
+                    viewModel.isFilterShowing.toggle()
+                } label: {
                     Image(systemName: "line.3.horizontal.decrease.circle.fill")
                 }
                 Menu {
-                    Button(action: viewModel.fileButtonTapped) {
+                    Button {
+                        viewModel.isCreatingFileShowing.toggle()
+                    } label: {
                         Text("Create New Group")
                     }
                 } label: {
@@ -53,7 +57,12 @@ struct ExpensesView: View {
                 CreateFileView(isCreatingFilePresented: $viewModel.isCreatingFileShowing)
             }
         }
-        .onAppear(perform: viewModel.fecthExpenses)
+        .task {
+            await viewModel.fecthExpenses()
+        }
+        .refreshable {
+            await viewModel.fecthExpenses()
+        }
     }
 }
 

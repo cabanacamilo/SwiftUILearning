@@ -39,6 +39,7 @@ struct ReceiptsView: View {
                             }
                         }
                     }
+                    .padding(.bottom)
                 }
                 .navigationTitle("Receipts")
             }

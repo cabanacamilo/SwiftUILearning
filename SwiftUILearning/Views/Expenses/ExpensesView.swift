@@ -14,21 +14,20 @@ struct ExpensesView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                if viewModel.showError {
+                    Text("Cannot Load Data")
+                } else {
+                    List(viewModel.expenses) { expense in
+                        NavigationLink(destination: DetailExpensesView(expense: expense)) {
+                            Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
+                        }
+                    }
+                }
                 if viewModel.isLoading {
                     ProgressView()
                         .progressViewStyle(.circular)
                         .tint(.gray)
                         .scaleEffect(2)
-                } else {
-                    if viewModel.showError {
-                        Text("Cannot Load Data")
-                    } else {
-                        List(viewModel.expenses) { expense in
-                            NavigationLink(destination: DetailExpensesView(expense: expense)) {
-                                Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
-                            }
-                        }
-                    }
                 }
             }
             .navigationBarItems(trailing:

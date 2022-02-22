@@ -14,19 +14,13 @@ class APIService {
     }
     
     static let shared = APIService()
-    let urlSrring = "https://run.mocky.io/v3/7edffa13-080b-4136-9422-6ab29fabf69d"
-
-    private func buildURLRequest() -> URLRequest {
-        let url = URL(string: urlSrring)!
-        return URLRequest(url: url)
-    }
+    private let urlSrring = "https://run.mocky.io/v3/7edffa13-080b-4136-9422-6ab29fabf69d"
     
     func fecthData() async -> Expenses? {
         do {
-            let (data, response) = try await URLSession.shared.data(for: buildURLRequest())
+            let (data, response) = try await URLSession.shared.data(from: URL(string: urlSrring)!)
             guard (response as? HTTPURLResponse)?.statusCode  == 200 else { throw APIError.response }
-            let expenses = try JSONDecoder().decode(Expenses.self, from: data)
-            return expenses
+            return try JSONDecoder().decode(Expenses.self, from: data)
         } catch {
             return nil
         }

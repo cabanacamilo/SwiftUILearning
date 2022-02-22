@@ -18,8 +18,10 @@ class ExpensesViewModel: ObservableObject {
     @Published var isCreatingFileShowing = false
     
     func fecthExpenses() async {
-        await Task.sleep(2_000_000_000)
+        self.isLoading = true
+        await Task.sleep(1_000_000_000)
         let result = await APIService.shared.fecthData()
+        self.isLoading = false
         guard let expenses = result?.expenses else {
             self.showError = true
             return

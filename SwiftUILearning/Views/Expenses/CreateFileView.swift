@@ -10,7 +10,7 @@ import SwiftUI
 struct CreateFileView: View {
     
     @Binding var isCreatingFilePresented: Bool
-    @StateObject var viewModel = CreateFileViewModel()
+    @StateObject private var viewModel = CreateFileViewModel()
     
     var body: some View {
         NavigationView {

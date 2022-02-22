@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExpensesView: View {
     
-    @StateObject var viewModel = ExpensesViewModel()
+    @StateObject private var viewModel = ExpensesViewModel()
     
     var body: some View {
         NavigationView {
@@ -19,14 +19,14 @@ struct ExpensesView: View {
                         .progressViewStyle(.circular)
                         .tint(.gray)
                         .scaleEffect(2)
-                }
-                
-                if viewModel.showError {
-                    Text("Cannot Load Data")
                 } else {
-                    List(viewModel.expenses) { expense in
-                        NavigationLink(destination: DetailExpensesView(expense: expense)) {
-                            Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
+                    if viewModel.showError {
+                        Text("Cannot Load Data")
+                    } else {
+                        List(viewModel.expenses) { expense in
+                            NavigationLink(destination: DetailExpensesView(expense: expense)) {
+                                Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
+                            }
                         }
                     }
                 }

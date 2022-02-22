@@ -33,7 +33,7 @@ struct HomeTabView: View {
                 }
                 .tag(HomeOption.add)
                 .onAppear { viewModel.addHastapped() }
-            Text("Receipts")
+            ReceiptsView()
                 .tabItem {
                     Image(systemName: "newspaper")
                     Text("Receipts")

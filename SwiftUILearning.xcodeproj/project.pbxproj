@@ -23,6 +23,9 @@
 		2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986427BE323400A1CB84 /* CreateFileView.swift */; };
 		2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */; };
 		2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986827BE4A3200A1CB84 /* Filter.swift */; };
+		2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11A9F27C4C25F008E4816 /* Receipts.swift */; };
+		2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */; };
+		2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		2FB3986427BE323400A1CB84 /* CreateFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileView.swift; sourceTree = "<group>"; };
 		2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		2FB3986827BE4A3200A1CB84 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2FC11A9F27C4C25F008E4816 /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
+		2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewModel.swift; sourceTree = "<group>"; };
+		2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 			children = (
 				2F4310F127BA2F84002E0ACC /* Expenses.swift */,
 				2FB3986827BE4A3200A1CB84 /* Filter.swift */,
+				2FC11A9F27C4C25F008E4816 /* Receipts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 		2F4310F327BA3186002E0ACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FD4A16627C4B281003C4D67 /* Receipts */,
 				2FAB6E9527C367B6003146D7 /* Expenses */,
 				2FAB6E9727C36874003146D7 /* HomeTabView.swift */,
 			);
@@ -124,6 +132,7 @@
 		2F4310F627BA32BD002E0ACC /* VIewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2FC11AA127C4C5DF008E4816 /* Receipts */,
 				2FAB6E9627C36813003146D7 /* Expenses */,
 				2FAB6E9927C36B4D003146D7 /* HomeTabViewModel.swift */,
 			);
@@ -149,6 +158,22 @@
 				2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */,
 			);
 			path = Expenses;
+			sourceTree = "<group>";
+		};
+		2FC11AA127C4C5DF008E4816 /* Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */,
+			);
+			path = Receipts;
+			sourceTree = "<group>";
+		};
+		2FD4A16627C4B281003C4D67 /* Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */,
+			);
+			path = Receipts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +250,8 @@
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
 				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
 				2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */,
+				2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */,
+				2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */,
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
 				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,
 				2F4310F827BA32D7002E0ACC /* ExpensesViewModel.swift in Sources */,
@@ -233,6 +260,7 @@
 				2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */,
 				2F4310F527BA320C002E0ACC /* ExpensesView.swift in Sources */,
 				2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */,
+				2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */,
 				2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */,
 				2FAB6E9A27C36B4D003146D7 /* HomeTabViewModel.swift in Sources */,
 			);

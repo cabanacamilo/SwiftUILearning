@@ -19,8 +19,7 @@ class ExpensesViewModel: ObservableObject {
     
     func fecthExpenses() async {
         self.isLoading = true
-        await Task.sleep(1_000_000_000)
-        let result = await APIService.shared.fecthData()
+        let result = await APIService.shared.fecthExpenses()
         self.isLoading = false
         guard let expenses = result?.expenses else {
             self.showError = true

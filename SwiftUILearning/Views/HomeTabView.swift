@@ -20,7 +20,7 @@ struct HomeTabView: View {
                 }
                 .tag(HomeOption.expenses)
                 .onAppear { viewModel.optionHasTapped() }
-            Text("Cards")
+            CardsView()
                 .tabItem {
                     Image(systemName: "creditcard.fill")
                     Text("Cards")

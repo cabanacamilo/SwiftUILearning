@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */; };
+		2F2AD6AA27C75048009AAC2A /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD6A927C75048009AAC2A /* CardsView.swift */; };
+		2F2AD6AD27C75790009AAC2A /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 2F2AD6AC27C75790009AAC2A /* SwiftUIPager */; };
 		2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */; };
 		2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310E127BA2599002E0ACC /* ContentView.swift */; };
 		2F4310E427BA259B002E0ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4310E327BA259B002E0ACC /* Assets.xcassets */; };
@@ -30,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileViewModel.swift; sourceTree = "<group>"; };
+		2F2AD6A927C75048009AAC2A /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		2F4310DC27BA2599002E0ACC /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningApp.swift; sourceTree = "<group>"; };
 		2F4310E127BA2599002E0ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,12 +59,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2AD6AD27C75790009AAC2A /* SwiftUIPager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F2AD6A827C7502B009AAC2A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				2F2AD6A927C75048009AAC2A /* CardsView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		2F4310D327BA2599002E0ACC = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		2F4310F327BA3186002E0ACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F2AD6A827C7502B009AAC2A /* Cards */,
 				2FD4A16627C4B281003C4D67 /* Receipts */,
 				2FAB6E9527C367B6003146D7 /* Expenses */,
 				2FAB6E9727C36874003146D7 /* HomeTabView.swift */,
@@ -192,6 +205,9 @@
 			dependencies = (
 			);
 			name = SwiftUILearning;
+			packageProductDependencies = (
+				2F2AD6AC27C75790009AAC2A /* SwiftUIPager */,
+			);
 			productName = SwiftUILearning;
 			productReference = 2F4310DC27BA2599002E0ACC /* SwiftUILearning.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +236,9 @@
 				Base,
 			);
 			mainGroup = 2F4310D327BA2599002E0ACC;
+			packageReferences = (
+				2F2AD6AB27C7578F009AAC2A /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+			);
 			productRefGroup = 2F4310DD27BA2599002E0ACC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +277,7 @@
 				2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */,
 				2F4310EF27BA2D78002E0ACC /* APIService.swift in Sources */,
 				2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */,
+				2F2AD6AA27C75048009AAC2A /* CardsView.swift in Sources */,
 				2F4310F527BA320C002E0ACC /* ExpensesView.swift in Sources */,
 				2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */,
 				2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */,
@@ -465,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F2AD6AB27C7578F009AAC2A /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F2AD6AC27C75790009AAC2A /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F2AD6AB27C7578F009AAC2A /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F4310D427BA2599002E0ACC /* Project object */;
 }

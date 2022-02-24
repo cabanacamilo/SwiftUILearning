@@ -9,18 +9,11 @@ import SwiftUI
 
 struct ExpensesView: View {
     
-    @StateObject var viewModel = ExpensesViewModel()
+    @StateObject private var viewModel = ExpensesViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                        .tint(.gray)
-                        .scaleEffect(2)
-                }
-                
                 if viewModel.showError {
                     Text("Cannot Load Data")
                 } else {
@@ -29,6 +22,12 @@ struct ExpensesView: View {
                             Text("\(expense.merchant ?? "") - ¥\(expense.amountCents ?? 0)")
                         }
                     }
+                }
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .tint(.gray)
+                        .scaleEffect(2)
                 }
             }
             .navigationBarItems(trailing:

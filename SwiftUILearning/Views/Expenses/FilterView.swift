@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FilterView: View {
     
-    @StateObject var viewModel = FilterViewModel()
+    @StateObject private var viewModel = FilterViewModel()
     @Binding var isPresentedFilter: Bool
     
     var body: some View {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeTabView: View {
     
-    @StateObject var viewModel = HomeTabViewModel()
+    @StateObject private var viewModel = HomeTabViewModel()
     
     var body: some View {
         TabView(selection: $viewModel.selectedView) {
@@ -20,7 +20,7 @@ struct HomeTabView: View {
                 }
                 .tag(HomeOption.expenses)
                 .onAppear { viewModel.optionHasTapped() }
-            Text("Cards")
+            CardsView()
                 .tabItem {
                     Image(systemName: "creditcard.fill")
                     Text("Cards")
@@ -33,7 +33,7 @@ struct HomeTabView: View {
                 }
                 .tag(HomeOption.add)
                 .onAppear { viewModel.addHastapped() }
-            Text("Receipts")
+            ReceiptsView()
                 .tabItem {
                     Image(systemName: "newspaper")
                     Text("Receipts")

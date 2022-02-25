@@ -25,6 +25,9 @@
 		2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986427BE323400A1CB84 /* CreateFileView.swift */; };
 		2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */; };
 		2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986827BE4A3200A1CB84 /* Filter.swift */; };
+		2FB6664B27C8B0DE00E29141 /* SettingsIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6664A27C8B0DE00E29141 /* SettingsIView.swift */; };
+		2FB6664E27C8C97600E29141 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6664D27C8C97600E29141 /* RoundedCornersShape.swift */; };
+		2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6664F27C8C9B000E29141 /* ImagePicker.swift */; };
 		2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11A9F27C4C25F008E4816 /* Receipts.swift */; };
 		2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */; };
 		2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */; };
@@ -49,6 +52,9 @@
 		2FB3986427BE323400A1CB84 /* CreateFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileView.swift; sourceTree = "<group>"; };
 		2FB3986627BE3C2300A1CB84 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		2FB3986827BE4A3200A1CB84 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2FB6664A27C8B0DE00E29141 /* SettingsIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIView.swift; sourceTree = "<group>"; };
+		2FB6664D27C8C97600E29141 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		2FB6664F27C8C9B000E29141 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2FC11A9F27C4C25F008E4816 /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
 		2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewModel.swift; sourceTree = "<group>"; };
 		2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 				2F4310F327BA3186002E0ACC /* Views */,
 				2F4310F027BA2F68002E0ACC /* Models */,
 				2F4310ED27BA2D5A002E0ACC /* Services */,
+				2FB6664C27C8C94100E29141 /* Helpers */,
 				2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */,
 				2F4310E127BA2599002E0ACC /* ContentView.swift */,
 				2F4310E327BA259B002E0ACC /* Assets.xcassets */,
@@ -134,6 +141,7 @@
 		2F4310F327BA3186002E0ACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FB6664927C8B0C500E29141 /* Settings */,
 				2F2AD6A827C7502B009AAC2A /* Cards */,
 				2FD4A16627C4B281003C4D67 /* Receipts */,
 				2FAB6E9527C367B6003146D7 /* Expenses */,
@@ -171,6 +179,23 @@
 				2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */,
 			);
 			path = Expenses;
+			sourceTree = "<group>";
+		};
+		2FB6664927C8B0C500E29141 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FB6664A27C8B0DE00E29141 /* SettingsIView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2FB6664C27C8C94100E29141 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2FB6664D27C8C97600E29141 /* RoundedCornersShape.swift */,
+				2FB6664F27C8C9B000E29141 /* ImagePicker.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2FC11AA127C4C5DF008E4816 /* Receipts */ = {
@@ -267,12 +292,15 @@
 			files = (
 				2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */,
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
+				2FB6664E27C8C97600E29141 /* RoundedCornersShape.swift in Sources */,
+				2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */,
 				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
 				2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */,
 				2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */,
 				2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */,
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
 				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,
+				2FB6664B27C8B0DE00E29141 /* SettingsIView.swift in Sources */,
 				2F4310F827BA32D7002E0ACC /* ExpensesViewModel.swift in Sources */,
 				2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */,
 				2F4310EF27BA2D78002E0ACC /* APIService.swift in Sources */,

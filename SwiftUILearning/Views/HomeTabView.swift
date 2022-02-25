@@ -40,7 +40,7 @@ struct HomeTabView: View {
                 }
                 .tag(HomeOption.receipts)
                 .onAppear { viewModel.optionHasTapped() }
-            Text("Settings")
+            SettingsIView()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Settings")

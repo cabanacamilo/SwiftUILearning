@@ -10,6 +10,7 @@
 		2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */; };
 		2F2AD6AA27C75048009AAC2A /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD6A927C75048009AAC2A /* CardsView.swift */; };
 		2F2AD6AD27C75790009AAC2A /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 2F2AD6AC27C75790009AAC2A /* SwiftUIPager */; };
+		2F2D069E27CC9BAD00B30299 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D069D27CC9BAD00B30299 /* AddView.swift */; };
 		2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */; };
 		2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310E127BA2599002E0ACC /* ContentView.swift */; };
 		2F4310E427BA259B002E0ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4310E327BA259B002E0ACC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		2F0F885327BF7F0800784BBD /* CreateFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFileViewModel.swift; sourceTree = "<group>"; };
 		2F2AD6A927C75048009AAC2A /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		2F2D069D27CC9BAD00B30299 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2F4310DC27BA2599002E0ACC /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILearningApp.swift; sourceTree = "<group>"; };
 		2F4310E127BA2599002E0ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				2FD4A16627C4B281003C4D67 /* Receipts */,
 				2FAB6E9527C367B6003146D7 /* Expenses */,
 				2FAB6E9727C36874003146D7 /* HomeTabView.swift */,
+				2F2D069D27CC9BAD00B30299 /* AddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */,
 				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
 				2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */,
+				2F2D069E27CC9BAD00B30299 /* AddView.swift in Sources */,
 				2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */,
 				2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */,
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,

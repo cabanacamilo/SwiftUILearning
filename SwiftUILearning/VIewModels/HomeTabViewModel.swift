@@ -15,6 +15,16 @@ class HomeTabViewModel: ObservableObject {
     @Published var isNewExpenseTapped = false
     @Published var isNewReceiptTapped = false
     @Published var isNewStaticExpenseTapped = false
+    @Published var addNewItem: AddNewItem = .dismiss
+    
+    func showViewItem() {
+        switch addNewItem {
+        case .expense: isNewExpenseTapped.toggle()
+        case .calendar: isNewStaticExpenseTapped.toggle()
+        case .receipt: isNewReceiptTapped.toggle()
+        case .dismiss: break
+        }
+    }
     
     func optionHasTapped() {
         previousSelectedView = selectedView
@@ -24,18 +34,6 @@ class HomeTabViewModel: ObservableObject {
         isAddTapped.toggle()
         selectedView = previousSelectedView
     }
-    
-    func newExpenseHasTapped() {
-        isNewExpenseTapped.toggle()
-    }
-    
-    func newReceiptHasTapped() {
-        isNewReceiptTapped.toggle()
-    }
-    
-    func newStaticExpenseHasTapped() {
-        isNewStaticExpenseTapped.toggle()
-    }
 }
 
 enum HomeOption: Int {
@@ -44,4 +42,11 @@ enum HomeOption: Int {
     case add = 2
     case receipts = 3
     case settings = 4
+}
+
+enum AddNewItem {
+    case expense
+    case calendar
+    case receipt
+    case dismiss
 }

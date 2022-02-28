@@ -12,50 +12,48 @@ struct HomeTabView: View {
     @StateObject private var viewModel = HomeTabViewModel()
     
     var body: some View {
-        TabView(selection: $viewModel.selectedView) {
-            ExpensesView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-                .tag(HomeOption.expenses)
-                .onAppear { viewModel.optionHasTapped() }
-            CardsView()
-                .tabItem {
-                    Image(systemName: "creditcard.fill")
-                    Text("Cards")
-                }
-                .tag(HomeOption.cards)
-                .onAppear { viewModel.optionHasTapped() }
-            Text("Add")
-                .tabItem {
-                    Image(systemName: "plus.circle.fill")
-                }
-                .tag(HomeOption.add)
-                .onAppear { viewModel.addHastapped() }
-            ReceiptsView()
-                .tabItem {
-                    Image(systemName: "newspaper")
-                    Text("Receipts")
-                }
-                .tag(HomeOption.receipts)
-                .onAppear { viewModel.optionHasTapped() }
-            SettingsIView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Settings")
-                }
-                .tag(HomeOption.settings)
-                .onAppear { viewModel.optionHasTapped() }
+        ZStack{
+            TabView(selection: $viewModel.selectedView) {
+                ExpensesView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                    .tag(HomeOption.expenses)
+                    .onAppear { viewModel.optionHasTapped() }
+                CardsView()
+                    .tabItem {
+                        Image(systemName: "creditcard.fill")
+                        Text("Cards")
+                    }
+                    .tag(HomeOption.cards)
+                    .onAppear { viewModel.optionHasTapped() }
+                Text("Add")
+                    .tabItem {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .tag(HomeOption.add)
+                    .onAppear { viewModel.addHastapped() }
+                ReceiptsView()
+                    .tabItem {
+                        Image(systemName: "newspaper")
+                        Text("Receipts")
+                    }
+                    .tag(HomeOption.receipts)
+                    .onAppear { viewModel.optionHasTapped() }
+                SettingsIView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Settings")
+                    }
+                    .tag(HomeOption.settings)
+                    .onAppear { viewModel.optionHasTapped() }
+            }
+            AddView(isPresented: $viewModel.isAddTapped, addNewItem: $viewModel.addNewItem)
         }
-        .actionSheet(isPresented: $viewModel.isAddTapped) {
-            ActionSheet(title: Text("Add New"), message: nil, buttons: [
-                .default(Text("Expense"), action: viewModel.newExpenseHasTapped),
-                .default(Text("Static"), action: viewModel.newStaticExpenseHasTapped),
-                .default(Text("Receipt"), action: viewModel.newReceiptHasTapped),
-                .cancel()
-            ])
-        }
+        .onChange(of: viewModel.addNewItem, perform: { _ in
+            viewModel.showViewItem()
+        })
         .sheet(isPresented: $viewModel.isNewExpenseTapped) {
             Text("New Expense")
         }

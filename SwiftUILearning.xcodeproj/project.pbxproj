@@ -32,6 +32,7 @@
 		2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11A9F27C4C25F008E4816 /* Receipts.swift */; };
 		2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */; };
 		2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */; };
+		2FF3B25D27CDD61200945A79 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF3B25C27CDD61200945A79 /* AddViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		2FC11A9F27C4C25F008E4816 /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
 		2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewModel.swift; sourceTree = "<group>"; };
 		2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsView.swift; sourceTree = "<group>"; };
+		2FF3B25C27CDD61200945A79 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				2FC11AA127C4C5DF008E4816 /* Receipts */,
 				2FAB6E9627C36813003146D7 /* Expenses */,
 				2FAB6E9927C36B4D003146D7 /* HomeTabViewModel.swift */,
+				2FF3B25C27CDD61200945A79 /* AddViewModel.swift */,
 			);
 			path = VIewModels;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */,
 				2F2D069E27CC9BAD00B30299 /* AddView.swift in Sources */,
 				2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */,
+				2FF3B25D27CDD61200945A79 /* AddViewModel.swift in Sources */,
 				2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */,
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
 				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,

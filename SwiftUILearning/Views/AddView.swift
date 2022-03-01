@@ -10,9 +10,8 @@ import SwiftUI
 struct AddView: View {
     
     @Binding var isPresented: Bool
-    @State private var backgroundOpacity = 0.0
-    @State private var viewHeight = 0.0
     @Binding var addNewItem: AddNewItem
+    @StateObject private var viewModel = AddViewModel()
     
     var body: some View {
         if isPresented {
@@ -20,7 +19,7 @@ struct AddView: View {
                 ZStack(alignment: .bottom) {
                     Rectangle()
                         .foregroundColor(.black)
-                        .opacity(backgroundOpacity)
+                        .opacity(viewModel.backgroundOpacity)
                     VStack(spacing: 20) {
                         Spacer()
                         HStack(spacing: 20) {
@@ -84,29 +83,31 @@ struct AddView: View {
                         }
                         Spacer()
                     }
-                    .frame(width: geomtry.size.width, height: viewHeight, alignment: .top)
+                    .frame(width: geomtry.size.width, height: viewModel.viewHeight, alignment: .top)
                     .background(Color(.white))
                     .clipShape(RoundedCornersShape(corners: [.topLeft, .topRight], radius: 30))
                 }
             }
             .ignoresSafeArea()
-            .onAppear {
-                withAnimation(.easeInOut(duration: 0.3)) {
-                    backgroundOpacity = 0.5
-                    viewHeight = 200
-                }
-            }
+            .onAppear { showView() }
         }
     }
     
     func dismissView(item: AddNewItem) {
         withAnimation(.easeInOut(duration: 0.3)) {
-            backgroundOpacity = 0
-            viewHeight = 0
+            viewModel.backgroundOpacity = 0
+            viewModel.viewHeight = 0
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             isPresented = false
             addNewItem = item
+        }
+    }
+    
+    func showView() {
+        withAnimation(.easeInOut(duration: 0.3)) {
+            viewModel.backgroundOpacity = 0.5
+            viewModel.viewHeight = 200
         }
     }
 }

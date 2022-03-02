@@ -11,22 +11,24 @@ import SwiftUIPager
 struct CardsView: View {
     
     @StateObject var page: Page = .first()
-    var colors: [Color] = [.yellow, .blue, .red]
+    @StateObject var viewModel = CardsViewModel()
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
                 VStack {
                     Pager(page: page,
-                          data: colors,
-                          id: \.self,
-                          content: { color in
-                        
+                          data: viewModel.cards,
+                          content: { card in
                         Rectangle()
-                            .foregroundColor(color)
+                            .foregroundColor(card.color)
                             .cornerRadius(20)
                             .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                        
                     })
+                        .onPageChanged({ i in
+                            viewModel.selectedCard = viewModel.cards[i]
+                        })
                         .sensitivity(.high)
                         .itemSpacing(20)
                         .alignment(.center)
@@ -57,8 +59,15 @@ struct CardsView: View {
                         .tint(.white)
                         .font(.title)
                     }
-                    List(0..<10) { item in
-                        Text("Expense \(item)")
+                    List(viewModel.selectedCard.expenses) { item in
+                        HStack {
+                            Text("\(item.value)")
+                            Spacer()
+                            Text("\(item.date)")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        
                     }
                     .listStyle(.plain)
                 }
@@ -69,7 +78,6 @@ struct CardsView: View {
                     Image(systemName: "arrow.clockwise")
                 }))
             }
-            
         }
     }
 }

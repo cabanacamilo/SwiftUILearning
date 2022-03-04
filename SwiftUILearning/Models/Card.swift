@@ -16,19 +16,21 @@ struct Card: Identifiable, Equatable {
     
     var id: Int
     var color: Color
+    var type: String
     var expenses: [CardExpense]
     
+    
     static let cards = [
-        Card(id: 0, color: .yellow, expenses: [
+        Card(id: 0, color: .yellow, type: "American Express", expenses: [
             CardExpense(id: 0, value: "¥1.000", date: "20/01/22"),
             CardExpense(id: 1, value: "¥500", date: "19/01/22")
         ]),
-        Card(id: 1, color: .blue, expenses: [
+        Card(id: 1, color: .blue, type: "Visa", expenses: [
             CardExpense(id: 0, value: "¥1.000", date: "20/01/22"),
             CardExpense(id: 1, value: "¥500", date: "19/01/22"),
             CardExpense(id: 2, value: "¥1.500", date: "18/01/22")
         ]),
-        Card(id: 2, color: .red, expenses: [
+        Card(id: 2, color: .red, type: "Master", expenses: [
             CardExpense(id: 0, value: "¥1.000", date: "20/01/22"),
             CardExpense(id: 1, value: "¥500", date: "19/01/22"),
             CardExpense(id: 2, value: "¥1.500", date: "18/01/22"),

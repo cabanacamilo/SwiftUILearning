@@ -17,14 +17,32 @@ struct CardsView: View {
         GeometryReader { geometry in
             NavigationView {
                 VStack {
+                    
                     Pager(page: page,
                           data: viewModel.cards,
                           content: { card in
-                        Rectangle()
-                            .foregroundColor(card.color)
-                            .cornerRadius(20)
-                            .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                        
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(card.color)
+                                .cornerRadius(20)
+                                .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                            GeometryReader { cardSize in
+                                VStack(spacing: 10) {
+                                    Text("Card Number: \(card.id)")
+                                        .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .trailing)
+                                        .font(.title2)
+                                        .padding([.top, .leading, .trailing], 16)
+                                    Spacer()
+                                    Text("0000-0000-0000-0000")
+                                        .font(.system(size: 20))
+                                    Text(card.type)
+                                        .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .leading)
+                                        .font(.title)
+                                        .padding([.bottom, .leading, .trailing], 16)
+                                }
+                            }
+                            
+                        }
                     })
                         .onPageChanged({ i in
                             viewModel.selectedCard = viewModel.cards[i]

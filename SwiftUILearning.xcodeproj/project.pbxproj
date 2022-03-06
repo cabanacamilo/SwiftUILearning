@@ -22,6 +22,9 @@
 		2F4310F527BA320C002E0ACC /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F427BA320C002E0ACC /* ExpensesView.swift */; };
 		2F4310F827BA32D7002E0ACC /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F727BA32D7002E0ACC /* ExpensesViewModel.swift */; };
 		2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4310F927BA3AC5002E0ACC /* DetailExpensesView.swift */; };
+		2F73A1D527D44F6A005368BB /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73A1D427D44F6A005368BB /* CoreDataService.swift */; };
+		2F73A1D727D45590005368BB /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73A1D627D45590005368BB /* AddCard.swift */; };
+		2F73A1DB27D46792005368BB /* AppInternalStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F73A1D927D46792005368BB /* AppInternalStorage.xcdatamodeld */; };
 		2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB6E9727C36874003146D7 /* HomeTabView.swift */; };
 		2FAB6E9A27C36B4D003146D7 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB6E9927C36B4D003146D7 /* HomeTabViewModel.swift */; };
 		2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB3986227BE30F500A1CB84 /* FilterView.swift */; };
@@ -53,6 +56,9 @@
 		2F4310F427BA320C002E0ACC /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		2F4310F727BA32D7002E0ACC /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
 		2F4310F927BA3AC5002E0ACC /* DetailExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpensesView.swift; sourceTree = "<group>"; };
+		2F73A1D427D44F6A005368BB /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		2F73A1D627D45590005368BB /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		2F73A1DA27D46792005368BB /* AppInternalStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppInternalStorage.xcdatamodel; sourceTree = "<group>"; };
 		2FAB6E9727C36874003146D7 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		2FAB6E9927C36B4D003146D7 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
 		2FB3986227BE30F500A1CB84 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				2F2AD6A927C75048009AAC2A /* CardsView.swift */,
+				2F73A1D627D45590005368BB /* AddCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 				2F4310F027BA2F68002E0ACC /* Models */,
 				2F4310ED27BA2D5A002E0ACC /* Services */,
 				2FB6664C27C8C94100E29141 /* Helpers */,
+				2F73A1D027D44DE2005368BB /* Resources */,
 				2F4310DF27BA2599002E0ACC /* SwiftUILearningApp.swift */,
 				2F4310E127BA2599002E0ACC /* ContentView.swift */,
 				2F4310E327BA259B002E0ACC /* Assets.xcassets */,
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4310EE27BA2D78002E0ACC /* APIService.swift */,
+				2F73A1D427D44F6A005368BB /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +187,14 @@
 				2FF3B25C27CDD61200945A79 /* AddViewModel.swift */,
 			);
 			path = VIewModels;
+			sourceTree = "<group>";
+		};
+		2F73A1D027D44DE2005368BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F73A1D927D46792005368BB /* AppInternalStorage.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2FAB6E9527C367B6003146D7 /* Expenses */ = {
@@ -312,6 +329,7 @@
 			files = (
 				2F0F885427BF7F0800784BBD /* CreateFileViewModel.swift in Sources */,
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
+				2F73A1DB27D46792005368BB /* AppInternalStorage.xcdatamodeld in Sources */,
 				2F0E7D1427CF6BE700145FB3 /* CardsViewModel.swift in Sources */,
 				2FB6664E27C8C97600E29141 /* RoundedCornersShape.swift in Sources */,
 				2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */,
@@ -325,8 +343,10 @@
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
 				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,
 				2FB6664B27C8B0DE00E29141 /* SettingsIView.swift in Sources */,
+				2F73A1D527D44F6A005368BB /* CoreDataService.swift in Sources */,
 				2F4310F827BA32D7002E0ACC /* ExpensesViewModel.swift in Sources */,
 				2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */,
+				2F73A1D727D45590005368BB /* AddCard.swift in Sources */,
 				2F4310EF27BA2D78002E0ACC /* APIService.swift in Sources */,
 				2FB3986327BE30F500A1CB84 /* FilterView.swift in Sources */,
 				2F2AD6AA27C75048009AAC2A /* CardsView.swift in Sources */,
@@ -556,6 +576,19 @@
 			productName = SwiftUIPager;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2F73A1D927D46792005368BB /* AppInternalStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F73A1DA27D46792005368BB /* AppInternalStorage.xcdatamodel */,
+			);
+			currentVersion = 2F73A1DA27D46792005368BB /* AppInternalStorage.xcdatamodel */;
+			path = AppInternalStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2F4310D427BA2599002E0ACC /* Project object */;
 }

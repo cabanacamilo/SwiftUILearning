@@ -12,6 +12,7 @@ struct CardsView: View {
     
     @StateObject var page: Page = .first()
     @StateObject var viewModel = CardsViewModel()
+    @FetchRequest(sortDescriptors: []) var cards: FetchedResults<CreditCard>
     
     var body: some View {
         GeometryReader { geometry in
@@ -19,23 +20,23 @@ struct CardsView: View {
                 VStack {
                     
                     Pager(page: page,
-                          data: viewModel.cards,
+                          data: cards,
                           content: { card in
                         ZStack {
                             Rectangle()
-                                .foregroundColor(card.color)
+                                .foregroundColor(.blue)
                                 .cornerRadius(20)
                                 .shadow(color: .gray, radius: 5, x: 2, y: 2)
                             GeometryReader { cardSize in
                                 VStack(spacing: 10) {
-                                    Text("Card Number: \(card.id)")
+                                    Text("Credit Card")
                                         .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .trailing)
                                         .font(.title2)
                                         .padding([.top, .leading, .trailing], 16)
                                     Spacer()
-                                    Text("0000-0000-0000-0000")
+                                    Text(card.number ?? "")
                                         .font(.system(size: 20))
-                                    Text(card.type)
+                                    Text(card.type ?? "")
                                         .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .leading)
                                         .font(.title)
                                         .padding([.bottom, .leading, .trailing], 16)
@@ -57,7 +58,7 @@ struct CardsView: View {
                         .frame(width: geometry.size.width, height: geometry.size.height * 0.3, alignment: .center)
                     HStack(spacing: geometry.size.width * 0.2) {
                         Button {
-                            print("Add Credit Card")
+                            viewModel.isAddCardPresented.toggle()
                         } label: {
                             Image(systemName: "creditcard")
                         }
@@ -95,6 +96,9 @@ struct CardsView: View {
                 }, label: {
                     Image(systemName: "arrow.clockwise")
                 }))
+            }
+            .fullScreenCover(isPresented: $viewModel.isAddCardPresented) {
+                AddCard(isPresented: $viewModel.isAddCardPresented)
             }
         }
     }

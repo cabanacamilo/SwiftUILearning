@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G314" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CreditCard" representedClassName="CreditCard" syncable="YES" codeGenerationType="class">
+    <entity name="CreditCard" representedClassName="CreditCard" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="number" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CreditCardExpenses" inverseName="card" inverseEntity="CreditCardExpenses"/>
+    </entity>
+    <entity name="CreditCardExpenses" representedClassName="CreditCardExpenses" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="card" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreditCard" inverseName="expenses" inverseEntity="CreditCard"/>
     </entity>
     <elements>
-        <element name="CreditCard" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="CreditCard" positionX="-54" positionY="-9" width="128" height="89"/>
+        <element name="CreditCardExpenses" positionX="-54" positionY="18" width="128" height="89"/>
     </elements>
 </model>

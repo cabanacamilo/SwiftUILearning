@@ -36,6 +36,10 @@
 		2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6664F27C8C9B000E29141 /* ImagePicker.swift */; };
 		2FC11AA027C4C25F008E4816 /* Receipts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11A9F27C4C25F008E4816 /* Receipts.swift */; };
 		2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */; };
+		2FD1366127D6102A006CB16F /* CreditCardExpenses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1365D27D6102A006CB16F /* CreditCardExpenses+CoreDataClass.swift */; };
+		2FD1366227D6102A006CB16F /* CreditCardExpenses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1365E27D6102A006CB16F /* CreditCardExpenses+CoreDataProperties.swift */; };
+		2FD1366327D6102A006CB16F /* CreditCard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1365F27D6102A006CB16F /* CreditCard+CoreDataClass.swift */; };
+		2FD1366427D6102A006CB16F /* CreditCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1366027D6102A006CB16F /* CreditCard+CoreDataProperties.swift */; };
 		2FD4A16827C4B2B3003C4D67 /* ReceiptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */; };
 		2FF3B25D27CDD61200945A79 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF3B25C27CDD61200945A79 /* AddViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,10 @@
 		2FB6664F27C8C9B000E29141 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2FC11A9F27C4C25F008E4816 /* Receipts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipts.swift; sourceTree = "<group>"; };
 		2FC11AA227C4C5FA008E4816 /* ReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewModel.swift; sourceTree = "<group>"; };
+		2FD1365D27D6102A006CB16F /* CreditCardExpenses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CreditCardExpenses+CoreDataClass.swift"; path = "SwiftUILearning/CreditCardExpenses+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		2FD1365E27D6102A006CB16F /* CreditCardExpenses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CreditCardExpenses+CoreDataProperties.swift"; path = "SwiftUILearning/CreditCardExpenses+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		2FD1365F27D6102A006CB16F /* CreditCard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CreditCard+CoreDataClass.swift"; path = "SwiftUILearning/CreditCard+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		2FD1366027D6102A006CB16F /* CreditCard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CreditCard+CoreDataProperties.swift"; path = "SwiftUILearning/CreditCard+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		2FD4A16727C4B2B3003C4D67 /* ReceiptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsView.swift; sourceTree = "<group>"; };
 		2FF3B25C27CDD61200945A79 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +100,17 @@
 				2F0E7D1327CF6BE700145FB3 /* CardsViewModel.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		2F24385527D60DA5004C6F66 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1365D27D6102A006CB16F /* CreditCardExpenses+CoreDataClass.swift */,
+				2FD1365E27D6102A006CB16F /* CreditCardExpenses+CoreDataProperties.swift */,
+				2FD1365F27D6102A006CB16F /* CreditCard+CoreDataClass.swift */,
+				2FD1366027D6102A006CB16F /* CreditCard+CoreDataProperties.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		2F2AD6A827C7502B009AAC2A /* Cards */ = {
@@ -156,6 +175,7 @@
 		2F4310F027BA2F68002E0ACC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2F24385527D60DA5004C6F66 /* Card */,
 				2F4310F127BA2F84002E0ACC /* Expenses.swift */,
 				2FB3986827BE4A3200A1CB84 /* Filter.swift */,
 				2FC11A9F27C4C25F008E4816 /* Receipts.swift */,
@@ -331,7 +351,9 @@
 				2F4310F227BA2F84002E0ACC /* Expenses.swift in Sources */,
 				2F73A1DB27D46792005368BB /* AppInternalStorage.xcdatamodeld in Sources */,
 				2F0E7D1427CF6BE700145FB3 /* CardsViewModel.swift in Sources */,
+				2FD1366327D6102A006CB16F /* CreditCard+CoreDataClass.swift in Sources */,
 				2FB6664E27C8C97600E29141 /* RoundedCornersShape.swift in Sources */,
+				2FD1366127D6102A006CB16F /* CreditCardExpenses+CoreDataClass.swift in Sources */,
 				2FB6665027C8C9B000E29141 /* ImagePicker.swift in Sources */,
 				2FB3986527BE323400A1CB84 /* CreateFileView.swift in Sources */,
 				2FAB6E9827C36874003146D7 /* HomeTabView.swift in Sources */,
@@ -343,6 +365,7 @@
 				2FB3986927BE4A3200A1CB84 /* Filter.swift in Sources */,
 				2FB3986727BE3C2300A1CB84 /* FilterViewModel.swift in Sources */,
 				2FB6664B27C8B0DE00E29141 /* SettingsIView.swift in Sources */,
+				2FD1366227D6102A006CB16F /* CreditCardExpenses+CoreDataProperties.swift in Sources */,
 				2F73A1D527D44F6A005368BB /* CoreDataService.swift in Sources */,
 				2F4310F827BA32D7002E0ACC /* ExpensesViewModel.swift in Sources */,
 				2F4310E227BA2599002E0ACC /* ContentView.swift in Sources */,
@@ -354,6 +377,7 @@
 				2F4310FA27BA3AC5002E0ACC /* DetailExpensesView.swift in Sources */,
 				2FC11AA327C4C5FA008E4816 /* ReceiptsViewModel.swift in Sources */,
 				2F4310E027BA2599002E0ACC /* SwiftUILearningApp.swift in Sources */,
+				2FD1366427D6102A006CB16F /* CreditCard+CoreDataProperties.swift in Sources */,
 				2FAB6E9A27C36B4D003146D7 /* HomeTabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

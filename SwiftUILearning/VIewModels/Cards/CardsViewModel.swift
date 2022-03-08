@@ -9,7 +9,7 @@ import Foundation
 
 class CardsViewModel: ObservableObject {
     
-    @Published var cards = Card.cards
-    @Published var selectedCard: Card = Card.cards[0]
+    @Published var pageIndex = 0
     @Published var isAddCardPresented = false
+    @Published var isAddExpenseToCard = false
 }

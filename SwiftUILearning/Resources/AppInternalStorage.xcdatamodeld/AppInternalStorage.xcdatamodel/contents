@@ -5,6 +5,11 @@
         <attribute name="number" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CreditCardExpenses" inverseName="card" inverseEntity="CreditCardExpenses"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="CreditCardExpenses" representedClassName="CreditCardExpenses" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String"/>

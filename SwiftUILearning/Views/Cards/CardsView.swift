@@ -30,14 +30,14 @@ struct CardsView: View {
                             GeometryReader { cardSize in
                                 VStack(spacing: 10) {
                                     Text("Credit Card")
-                                        .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .trailing)
+                                        .frame(width: cardSize.size.width - 32, alignment: .trailing)
                                         .font(.title2)
                                         .padding([.top, .leading, .trailing], 16)
                                     Spacer()
                                     Text(card.number ?? "")
                                         .font(.system(size: 20))
                                     Text(card.type ?? "")
-                                        .frame(width: cardSize.size.width - 32, height: .infinity, alignment: .leading)
+                                        .frame(width: cardSize.size.width - 32, alignment: .leading)
                                         .font(.title)
                                         .padding([.bottom, .leading, .trailing], 16)
                                 }
@@ -46,7 +46,7 @@ struct CardsView: View {
                         }
                     })
                         .onPageChanged({ i in
-                            viewModel.selectedCard = viewModel.cards[i]
+                            viewModel.pageIndex = i
                         })
                         .sensitivity(.high)
                         .itemSpacing(20)
@@ -78,27 +78,42 @@ struct CardsView: View {
                         .tint(.white)
                         .font(.title)
                     }
-                    List(viewModel.selectedCard.expenses) { item in
-                        HStack {
-                            Text("\(item.value)")
-                            Spacer()
-                            Text("\(item.date)")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                    List {
+                        Section("Expenses") {
+                            ForEach(cards[viewModel.pageIndex].strongExpenses) { cardExpense in
+                                HStack {
+                                    Text("\(cardExpense.strongValue)")
+                                    Spacer()
+                                    Text("\(cardExpense.strongDate)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                            
                         }
-                        
                     }
                     .listStyle(.plain)
                 }
                 .navigationTitle("Cards")
-                .navigationBarItems(trailing: Button(action: {
-                    print("Reload")
-                }, label: {
-                    Image(systemName: "arrow.clockwise")
-                }))
+                .navigationBarItems(trailing: HStack {
+                    Button(action: {
+                        print("Reload")
+                    }, label: {
+                        Image(systemName: "arrow.clockwise")
+                    })
+                    Button {
+                        viewModel.isAddExpenseToCard.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                )
             }
             .fullScreenCover(isPresented: $viewModel.isAddCardPresented) {
                 AddCard(isPresented: $viewModel.isAddCardPresented)
+            }
+            .fullScreenCover(isPresented: $viewModel.isAddExpenseToCard) {
+                AddCardExpense(isAddCardExpensePresented: $viewModel.isAddExpenseToCard, card: cards[viewModel.pageIndex])
             }
         }
     }
